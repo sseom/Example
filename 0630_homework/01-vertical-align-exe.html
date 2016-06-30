@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>수직 정렬 방법론</title>
+    <style type="text/css">
+
+.text, .img, .block{
+	width: 200px;
+	height: 200px;
+	border: 3px solid #000;
+}
+.text  {border-color:#99f;} 
+.img {border-color:#f99;}
+.block div {border:dashed; display: inline;}
+
+
+img{vertical-align: middle;}/*이미지가 가지는 공간오류*/
+
+
+
+/*Using line-height (and vertical-align)*/
+.text-box1, .image-box1, .block-box1{
+	line-height: 200px;
+}
+.big-txt{
+	font-size: 40px;
+}
+
+/*Using display:table-cell*/
+.text-box2, .image-box2, .block-box2{
+	display: table-cell;
+	vertical-align: middle;
+}
+/*Using line-height and display:inline-block*/
+.text-box3, .image-box3, .block-box3{
+	display:inline-block;
+	line-height: 200px;
+}
+
+    </style>
+  </head>
+  <body>
+
+  <!-- 
+크기가 다른 텍스트의 세로정렬은  vertical-align 으로 안되나? line-height 뿐이네,,
+텍스트와 이미지는 되는데,,,
+   -->
+
+<h2>Common code of examples</h2>
+		<div class="text txt-box">
+			<span>Text inline</span>
+		</div>
+		<div class="img">
+			<img src="http://placehold.it/100x100/000/fff/?text=img" alt="image">
+		</div>
+		<div class="block">
+			<div> Block element</div>
+		</div>
+
+
+<h2>1. Using line-height (and vertical-align)</h2>
+		<div class="text text-box1">
+			<span>Text inline</span>
+			<span class="big-txt">Text inline</span>
+			<!-- <img src="http://placehold.it/100x100/000/fff/?text=img" alt="image"> -->
+		</div>
+		<div class="img image-box1">
+			<img src="http://placehold.it/100x100/000/fff/?text=img1" alt="image">
+		</div>
+		<div class="block block-box1">
+			<div> Block element</div>
+		</div>
+
+<h2>2. Using display:table-cell</h2>
+		<div class="text text-box2">
+			<span>Text inline</span>
+		</div>
+		<div class="img image-box2">
+			<img src="http://placehold.it/100x100/000/fff/?text=img2" alt="image">
+		</div>
+		<div class="block block-box2">
+			<div> Block element</div>
+		</div>
+
+<h2>. Using line-height and display:inline-block</h2>
+		<div class="text text-box3">
+			<span>Text inline</span>
+		</div>
+		<div class="img image-box3">
+			<img src="http://placehold.it/100x100/000/fff/?text=img3" alt="image">
+		</div>
+		<div class="block block-box3">
+			<div> Block element</div>
+		</div>
+  </body>
+</html>
