@@ -58,8 +58,10 @@
 |  | E::after| 선택요소의 자식으로 뒤쪽에 가상요소를 배치해서 가르키는 선택자|
 |  | E::first-line| 선택 요소의 첫번째줄을 가르키는 선택자|
 |  | E::first-letter| 선택요소의 첫번째 글자를 가르키는 선택자| 
-
+|  | E::selection | 사용자가 드래그해서 텍스트블럭을 선택했을때 디자인해줄 요소를 선택 |
 
 [※ W3C, Selectors Level 3 ](https://www.w3.org/TR/selectors/#selectors)
+
+[※ w3schools CSS Selectors](http://www.w3schools.com/cssref/css_selectors.asp)
 
 [※ w3schools Selector Demo](http://www.w3schools.com/cssref/trysel.asp?selector=p:first-of-type)
