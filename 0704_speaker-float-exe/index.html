@@ -25,7 +25,30 @@
     	}
     	.content-wrap:hover{
     		background: #FFF2E4;
+            position: relative;
     	}
+        /* 마우스 호버 */
+        .content-wrap:hover::after{
+            content: "";
+            position: absolute;
+            z-index: 99;
+            left:50%;
+            margin-left: -20px;
+            top:50%;
+            margin-top: -20px;
+            width: 0;
+            height: 0;
+            border-right: 20px solid #FFF2E4;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+        }
+
+        .right-arrow.content-wrap:hover::after{
+            margin-left: 0;
+            border-right: 20px solid transparent;
+            border-left: 20px solid #FFF2E4;
+        }
+        /*클리어픽스*/
     	.cf::after{
     		content:"";
     		display: block;
@@ -48,10 +71,14 @@
     	/* 텍스트 정렬은 가운데 , 패딩으로 여백 그런데 패딩왼 안먹어 턱스트영역이 이미지플롯영역으로 빨려들어갔으니 오버플로우해서 해지하면 먹음 , 마진탑으로 위에 여백*/
     	.txt-box{
     		text-align: center;
-    		overflow: hidden;
+    		/*overflow: hidden;*/
+            float: right;
+             width:50%;
+             box-sizing: border-box;
     		padding-right: 30px;
     		padding-left: 30px;
     		margin-top: 55px;
+            
     	}
     	.name{
     		font: 19px/1.1 "Montserrat",sans-serif;
@@ -127,7 +154,7 @@
                 </div>
             </div>
             
-            <div class="content-wrap wrap-half">
+            <div class="content-wrap wrap-half right-arrow ">
                 <img class="photo align-right" src="images/speaker_4.jpg" alt="SAUL GOODMAN" width="320" height="327">
                 <div class="txt-box">
                     <h2 class="name">SAUL GOODMAN</h2>
@@ -138,7 +165,7 @@
                 </div>
             </div>
             
-            <div class="content-wrap wrap-half">
+            <div class="content-wrap wrap-half right-arrow ">
                 <img class="photo align-right" src="images/speaker_5.jpg" alt="HUGH LAURENCE" width="320" height="327">
                 <div class="txt-box">
                     <h2 class="name">HUGH LAURENCE</h2>
