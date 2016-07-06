@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>0706_momentum-float-exe</title>
+    <link rel="stylesheet" type="text/css" href="../resources/reset.css">
+    <!-- 폰트어썸 사용 -->
+    <link rel="stylesheet" type="text/css" href="../resources/font-awsesome/font-awesome.min.css">
+    <style type="text/css">
+    	body{
+    		margin: 0;
+    		height: 100vh;
+    		background: url("images/bg.jpg") center no-repeat;
+    		background-size: cover;
+    		color: #fff;
+    	}
+
+        [class$="-box"]{
+            position: absolute;
+        }
+
+    	a{
+    		text-decoration: none;
+    		color: hsla(0,50%,100%,0.5);
+            display: block;
+     	}
+        a:hover{
+            color: #fff;
+        }
+    	.util-box{
+    		top: 0;
+    		left: 0;
+    	}
+    	.weather-box{
+    		right: 0;
+    		top: 0;
+            font-size: 1.5rem;
+            color: #fff;
+    	}
+        .weather-box .city{
+            display: block;
+            font-size: 0.875rem;
+            padding-top: 0.125rem;
+            color: hsla(0,50%,100%,0.5);
+        }
+    	.todo-box{
+    		right: 0;
+    		bottom: 0;
+    	}
+        .info-box{
+            left: 0;
+            bottom: 0;
+        }
+        .util-box, .info-box{
+            margin-left: 1.25rem;
+        }
+        .util-box, .weather-box{
+            margin-top: 1rem;
+        }
+        .weather-box, .todo-box{
+            text-align: right;
+            margin-right: 1.25rem;
+        }
+        .todo-box, .info-box{
+            margin-bottom: 1rem;
+        }
+
+    	.txt-box{
+    		width: 50%;
+    		height: auto;
+    		top: 50%;
+    		left: 50%;
+    		/*margin-left: -25%;*/
+    		margin-top: -4.6875rem;
+            /*margin-bottom: 15px;*/
+    		transform: translateX(-50%);
+    		/*자신의 너비만큼 반만 - 옮김*/
+    		text-align: center;
+    		
+    	}
+    	.time-txt{
+    		font-size: 10rem;
+    	}
+    	.txt-box .sseom{
+    		font-size: 2.5rem;
+            margin-top: -1.25rem;
+    		margin-bottom: 1.875rem;
+            font-weight: bold;
+    	}
+    	.txt-box .today{
+    		font-size: 1.875rem;
+            text-shadow: 0 0 6px #000;
+    	}
+    	.saying-box{
+    	   bottom: 0;
+           left: 50%;
+           transform: translateX(-50%);
+           margin-bottom: 0.9375rem;
+    	}
+        .today input{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 0.625rem;
+            width: 60%;
+            background-color: transparent;
+            border: 1px solid transparent;
+            border-bottom: 2px solid #fff;
+            color: #fff;
+            font-size: 25px;
+        }
+    </style>
+  </head>
+  <body>
+		<div class="util-box"><a href="#" class="icon-after">Links <span class="fa fa-search" aria-label="search"></span></a></div>
+		<div class="weather-box icon"><span class="fa fa-sun-o" aria-label="wwather-sun"></span>30&deg; <span class="city">Seoul</span></div>
+		<div class="todo-box"><a href="#">To Do</a></div>
+		<div class="info-box"><a href="#"><span class="fa fa-gear" aria-label="gear"></span> Blue City, Italy</a></div>
+		<div class="txt-box">
+			<div class="time-txt">11:03</div>
+			<p class="sseom">Good Morning, sseom</p>
+            <form class="today">
+                    <label for="today-input-text">What is your main focus for today?</label>
+                    <input type="text" name="today-input-text" id="today-input-text">
+            </form>
+		</div>
+        <p class="saying-box">Let's get a lot of fun today</p>
+  </body>
+</html>

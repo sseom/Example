@@ -1,0 +1,52 @@
+body{
+	/*margin-left: 25%;
+	margin-right: 25%;*/
+	height: 100vh;
+	/*line-height: 100vh;*/
+	background: radial-gradient(#fcbaff, #013EC4) no-repeat;
+}
+.buttonset-movie-control{
+	text-align: center;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: 0 0 20px #010b27;
+}
+
+[class^="button-"]{
+	background-color: transparent;
+	border: none;
+	border: 3px solid #2A2A2A;
+	background: linear-gradient(#eee, #aaa);
+	height: 40px;
+	width: 80px;
+	margin-left: -5px;
+	position: relative;
+	padding-top: 5px;
+}
+[class^="button-"]:nth-child(1){
+	border-bottom-left-radius: 20px;
+	border-top-left-radius: 20px;
+	border-right: none;
+}
+[class^="button-"]:nth-last-child(1){
+	border-bottom-right-radius: 20px;
+	border-top-right-radius: 20px;
+	border-left: none;
+}
+.fa{
+	position: absolute;
+}
+.fa-play, .fa-pause, .fa-stop{
+	left: 10px;
+	top: 3px;
+}
+
+[class^="button-"]:hover,
+[class^="button-"]:focus{
+	color: #fff;
+	cursor: pointer;
+	background: linear-gradient(#525252, #adadad, #525252);
+}
+

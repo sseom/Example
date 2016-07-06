@@ -6,6 +6,9 @@
     - [selector.md](https://github.com/sseom/homework/blob/master/0630_homework/selector.md)
 3. 0704_image-gallery [이미지 갤러리](https://sseom.github.io/homework/0704_image-gallery/)
 4. 0704_speaker-float-exe [float 사용 레이아웃 예제 1](https://sseom.github.io/homework/0704_speaker-float-exe/)
+5. 0706_homeWork
+    - [momentum-float-exe]()
+    - [button-position-exe]()
 
 
 ---
