@@ -18,7 +18,7 @@ body{
 	background-color: transparent;
 	border: none;
 	border: 3px solid #2A2A2A;
-	background: linear-gradient(#eee, #aaa);
+	background: linear-gradient(#939393 ,#eee, #fff, #aaa,#939393);
 	height: 40px;
 	width: 80px;
 	margin-left: -5px;
@@ -47,6 +47,6 @@ body{
 [class^="button-"]:focus{
 	color: #fff;
 	cursor: pointer;
-	background: linear-gradient(#525252, #adadad, #525252);
+	background: linear-gradient(#444444 , #D8D8D8, #929292,#444444);
 }
 
