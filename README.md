@@ -7,8 +7,8 @@
 3. 0704_image-gallery [이미지 갤러리](https://sseom.github.io/homework/0704_image-gallery/)
 4. 0704_speaker-float-exe [float 사용 레이아웃 예제 1](https://sseom.github.io/homework/0704_speaker-float-exe/)
 5. 0706_homeWork
-    - [momentum-float-exe](https://sseom.github.io/homework/0706_homeWork/0706_homeWork/momentum-float-exe/)
-    - [button-position-exe](https://sseom.github.io/homework/0706_homeWork/0706_homeWork/button-position-exe/)
+    - [momentum-float-exe](https://sseom.github.io/homework/0706_homeWork/momentum-float-exe/)
+    - [button-position-exe](https://sseom.github.io/homework/0706_homeWork/button-position-exe/)
 
 
 ---
