@@ -9,8 +9,11 @@
 5. 0706_homeWork
     - [momentum-float-exe](https://sseom.github.io/homework/0706_homeWork/momentum-float-exe/)
     - [button-position-exe](https://sseom.github.io/homework/0706_homeWork/button-position-exe/)
+    - [ui-kit-exe](https://sseom.github.io/homework/0706_homeWork/ui-kit-exe/)
 6. 0707_grid-system
     - [grid-system 예제](https://sseom.github.io/homework/0707_grid-system)
+7. 0710_grid-system2
+    - [grid-system 예제 2](https://sseom.github.io/homework/0710_grid-system2)
 
 
 ---
