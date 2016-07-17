@@ -1,0 +1,189 @@
+@charset "utf-8";
+/*기본링크스타일*/
+a{
+	text-decoration: none;
+	padding-bottom: 2px;/*하위브라우져 호완*/
+	padding-bottom: 0.125rem;
+	border-bottom: 1px solid;
+	border-bottom: 0.0625rem solid;
+}
+
+/**
+ * ---------------------------------
+ * 배경 색상 페이드(Fade In/Out)
+ * .fade-bg
+ * .fade-bg.round
+*/
+
+/*배경색상 페이드(fade in , out) .fade-bg*/
+
+/*글자크기 상대적이어야해서 em 단위사용*/
+.fade-bg{
+	/*display: block;*/
+	vertical-align: bottom;
+	padding: 0.25em 0.375em;
+	transition: all 0.25s;
+	border-bottom: none;
+}
+
+.fade-bg.round{
+	border-radius: 0.1875em;
+}
+.fade-bg:hover,
+.fade-bg:focus{
+	background: #000;
+	color: #fff;
+}
+
+.fade-bg:focus{
+	/*outline: none;*/
+}
+
+/**
+ * ---------------------------------
+ * 전 방위 슬라이드(← → ↑ ↓)
+ * .slide-from-left
+ * .slide-from-right
+ * .slide-from-top
+ * .slide-from-bottom
+ */
+a[class*="slide-"]{
+	position: relative;
+	overflow: hidden;
+	display: inline-block;/*히든을위해*/
+	/*글씨기 올라가니까*/
+	vertical-align: bottom;
+	padding:0.06em 0.12em;
+	border-bottom: none;
+}
+a[class*="slide-"]::after{
+		position: absolute;
+		width: 100%;
+		content: attr(data-linktext);
+		background: #A05DFF;
+		color: #fff;
+		transition: all 0.45s;
+		text-align: center;
+}
+
+a.slide-from-left::after{
+	left: -100%;
+}
+a.slide-from-left:hover::after,
+a.slide-from-left:focus::after{
+	left: 0;
+}
+
+a.slide-from-right::after{
+	right: -100%;
+}
+a.slide-from-right:hover::after,
+a.slide-from-right:focus::after{
+	right: 0;
+}
+
+a.slide-from-top::after{
+	top: -100%;
+	left: 0;
+}
+a.slide-from-top:hover::after,
+a.slide-from-top:focus::after{
+	top: 0;
+}
+
+a.slide-from-bottom::after{
+	bottom: -100%;
+	left: 0;
+}
+a.slide-from-bottom:hover::after,
+a.slide-from-bottom:focus::after{
+	bottom: 0;
+}
+
+
+/**
+ * ---------------------------------
+ * 언더라인 페이드
+ * .fade-underline
+
+ transition:장면전환 (a→b b→a)
+property(ex- color, background, font-size,... , all) duration(ex- 100ms,0.2s) timing-function delay    
+(속성 , 지속시간, 움직임유형, 지연시간)
+ */
+.fade-underline{
+	border-bottom: 2px solid transparent;
+	/*장면전황 가 -> 나 , 나-> 가   ==>  트랜지션*/
+	/*transition: 속성 지속시간 움직임유형 지연시간;*/
+	/*지얀시간은 기본값은 0 옵션일뿐*/
+	/*밀리세컨드 단위*/
+	/* 필수  transition: border-bottom-color 0.2s; */
+	transition: border-bottom-color 0.2s linear 0.25;
+	/*linear  :  시간분의 거리가 같음 
+	이지 느림
+	이지인 첨은는리고 빠름
+	이지아웃  첨은 빠르고 뒤는 느림 */
+
+
+	/* 별도의 사용자 인터랙션 없이 처음부터 움직임을 제어하려면 애니메이션 */
+}
+
+.fade-underline:hover,
+.fade-underline:focus{
+	color: #000;
+	border-bottom-color: currentColor;
+	/*  currentColor  ?? 현재컬러값을 가져다 써라  */
+}
+
+/**
+ * ---------------------------------
+ * 언더라인 슬라이드(← → ↔)
+ * .underline-from-left
+ * .underline-from-right
+ * .underline-from-center
+ */
+
+a[class*="underline-"]{
+	/* 그라디언트에서 각도 to right  to는 종착지 */
+	position: relative;
+	border-bottom: none;
+	/*hidden 은 블록일때 */
+	/*overflow: hidden;*/
+	/*display: inline-block;*/
+	/*vertical-align: bottom;*/
+}
+
+a[class*="underline-"]::before{
+	content: '';
+	position: absolute;
+	top: 100%;/*위에선이 생겨서 아래로내리기위*/
+	border-bottom: 2px solid currentColor;
+	/*width: 100%;*/
+	transition: all 0.2s;
+}
+a.underline-from-left::before{
+	left: 0%;
+	right: 100%;
+}
+a.underline-from-left:hover::before,
+a.underline-from-left:focus::before{
+	left: 0;
+	right: 0;
+}
+
+a.underline-from-right::before{
+	left: 100%;
+	right: 0;
+}
+a.underline-from-right:hover::before{
+	left: 0;
+	right: 0;
+}
+
+a.underline-from-center::before{
+	left: 50%;
+	right: 50%;
+}
+a.underline-from-center:hover::before{
+	left: 0;
+	right: 0;
+}

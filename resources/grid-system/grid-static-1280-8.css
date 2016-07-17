@@ -1,0 +1,166 @@
+@charset "utf-8";
+/**
+ * Grid System (160 [unit(130) + gutter(15)], 8 columns)
+ * 1280 - 30 = 1250px
+ * base-font-size: 0.9375rem (18px)
+ * base-leading-ratio: 1.5; // 18 * 1.5 = 27px
+ * gutter-direction: after; // margin-right ÃƒÂ¬Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¬Ã…Â¡Ã‚Â©
+ */
+
+/**
+ * --------------------------------
+ * Overlay Grid Guideline Module
+ * ----------------------------- */
+.grid-container::before {
+  content: '';
+  position: absolute;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 500vh;
+
+}
+
+.grid-container.show-grid::before {
+  /*background: hsla(60, 50%, 50%, 0.3);*/
+    background:
+    -webkit-linear-gradient(left, rgba(191, 64, 64, 0.3) 81%, rgba(0, 0, 0, 0) 81%),
+    -webkit-linear-gradient(rgba(0, 0, 0, 0) 26px, #26923f 26px);
+    background:
+    linear-gradient(90deg, rgba(191, 64, 64, 0.3) 81%, rgba(0, 0, 0, 0) 81%),
+    linear-gradient(rgba(0, 0, 0, 0) 26px, #26923f 26px);
+  background-size:
+    160px 1px,
+    1px 1.6875rem;
+}
+
+.grid-container.show-grid::after {  }
+
+.grid-container.show-grid-split::before {
+  background: 
+    -webkit-linear-gradient(left, transparent 8.4%, rgba(191, 64, 64, 0.3) 8.4%, rgba(191, 64, 64, 0.3) 91.6%, transparent 91.6%), 
+    -webkit-linear-gradient(transparent 26px, #26923f 26px);
+  background: 
+    linear-gradient(90deg, transparent 8.4%, rgba(191, 64, 64, 0.3) 8.4%, rgba(191, 64, 64, 0.3) 91.6%, transparent 91.6%), 
+    linear-gradient(transparent 26px, #26923f 26px);
+  background-size: 156.25px 1px, 1px 1.6875rem;
+}
+
+/* ì´ë„ˆë¹„ 160   => ( 130/160 )*100  => í¼ì„¼íŠ¸ê°’ */
+
+
+/**
+ * --------------------------------
+ * Grid Container Module
+ * ----------------------------- */
+.grid-container { 
+	position: relative; 
+	width: 1250px; 
+	margin-left: auto; 
+	margin-right: auto; 
+}
+
+/**
+ * --------------------------------
+ * Grid Module
+ * ----------------------------- */
+.grid::after { content: ''; display: block; clear: both; }
+
+/**
+ * --------------------------------
+ * Unit Module
+ * ----------------------------- */
+ /*ì—í”„í„°ë°©ì‹ ì´ê³  ë¼ìŠ¤íŠ¸ì°¨ì¼ë“œë¥¼ ì¸ì‹ëª»í•˜ëŠ” ë¸Œë¼ìš°ì ¸ë¥¼ ëŒ€ì‘í•˜ê¸°ìœ„í•´ í´ëž˜ìŠ¤ ë¼ìŠ¤íŠ¸ë‚˜ ì˜¤ë©”ê°€ ë§Œë“¤ì–´ ë†“ìŒ*/
+.grid [class*="unit-"] { float: left; margin-right: 30px; }
+.grid .last, .grid .omega { margin-right: 0; }
+.grid .unit-1 { width: 130px; }
+.grid .unit-2 { width: 290px; }
+.grid .unit-3 { width: 450px; }
+.grid .unit-4 { width: 610px; }
+.grid .unit-5 { width: 770px; }
+.grid .unit-6 { width: 930px; }
+.grid .unit-7 { width: 1090px; }
+.grid .unit-8 { width: 1250px; }
+
+/*
+push  ,   pull 
+ì¼ë°˜íë¦„ì„ ê¹¨ì§€ ì•Šì€ìƒíƒœì—ì„œ 
+*/
+.grid [class*="push-"],
+.grid [class*="pull-"]{position: relative;}
+
+.push-1{ left: 160px }/**/
+.push-2{ left: 320px }/**/
+.push-3{ left: 480px }
+.push-4{ left: 640px }
+.push-5{ left: 800px }
+.push-6{ left: 960px }
+.push-7{ left: 1120px }
+.push-8{ left: 1280px }
+
+.pull-1{right: 160px;}
+.pull-2{right: 320px;}
+.pull-3{right: 480px;}
+.pull-4{ right: 640px }
+.pull-5{ right: 800px }
+.pull-6{ right: 960px }
+.pull-7{ right: 1120px }
+.pull-8{ right: 1280px }
+
+
+/* prefix  subfix  */
+.prefix-1{ margin-left: 160px }
+.prefix-2{ margin-left: 320px }
+.prefix-3{ margin-left: 480px }
+.prefix-4{ margin-left: 640px }
+.prefix-5{ margin-left: 800px }
+.prefix-6{ margin-left: 960px }
+.prefix-7{ margin-left: 1120px }
+.prefix-8{ margin-left: 1280px }
+
+.subfix-1{ margin-right: 160px }
+.subfix-2{ margin-right: 320px }
+.subfix-3{ margin-right: 480px }
+.subfix-4{ margin-right: 640px }
+.subfix-5{ margin-right: 800px }
+.subfix-6{ margin-right: 960px }
+.subfix-7{ margin-right: 1120px }
+.subfix-8{ margin-right: 1280px }
+
+/**
+ * --------------------------------
+ * Prefix, Suffix Module
+ * margin
+ * padding
+ * ----------------------------- */
+
+.grid .padding-prefix-1 { padding-left: 160px; }
+.grid .padding-prefix-2 { padding-left: 320px; }
+.grid .padding-prefix-3 { padding-left: 480px; }
+.grid .padding-prefix-4 { padding-left: 640px; }
+.grid .padding-prefix-5 { padding-left: 800px; }
+.grid .padding-prefix-6 { padding-left: 960px; }
+.grid .padding-prefix-7 { padding-left: 1120px; }
+.grid .padding-prefix-8 { padding-left: 1280px; }
+
+.grid .padding-suffix-1 { padding-right: 160px; }
+.grid .padding-suffix-2 { padding-right: 320px; }
+.grid .padding-suffix-3 { padding-right: 480px; }
+.grid .padding-suffix-4 { padding-right: 640px; }
+.grid .padding-suffix-5 { padding-right: 800px; }
+.grid .padding-suffix-6 { padding-right: 960px; }
+.grid .padding-suffix-7 { padding-right: 1120px; }
+.grid .padding-suffix-8 { padding-right: 1280px; }
+
+
+
+
+
+
+
+
+
+
+
+
