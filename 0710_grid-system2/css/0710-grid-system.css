@@ -15,12 +15,13 @@
 	z-index: 1000;
 	height: 300vh;
 	width: 100%;
-}
-.grid-container:hover::before{
 	background: 
     linear-gradient(180deg, transparent 9px, #0099FF 9px),
     linear-gradient(to right, transparent 10px, hsla(120, 100%, 50%,0.3) 10px,  hsla(120, 100%, 50%,0.3) 140px , transparent 140px);
   background-size: 1px 10px, 150px 1px;
+}
+.grid-container:hover::before{
+	background: none;
 }
 /* unit */
 [class*="unit-"]{
