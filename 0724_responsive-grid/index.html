@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>responsive-grid-exe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ">
+    <link rel="stylesheet" href="../resources/reset/normalize.css">
+    <link rel="stylesheet" href="../resources/common.css">
+    <link rel="stylesheet" href="../resources/grid-system/grid-resposive.css">
+    <style>
+    	.container section{ box-sizing: border-box; color: #fff; height: 100vh; }
+    	.container section:nth-child(1){ background: #D6E076; }
+    	.container section:nth-child(2){ background: #5087DA; }
+    	.container section:nth-child(3){ background: #2BAA68; }
+    	.container .headline { margin-top: 0; margin-bottom: 0; padding: 10px 0 0 10px; }
+
+			 /*최소 500부터 */
+			@media (min-width: 500px){
+				.container section:nth-child(2),
+				.container section:nth-child(3){ height: 50vh; }
+			}
+			 /*최소 900부터 */
+			@media (min-width: 900px){
+				.container section:nth-child(2),
+				.container section:nth-child(3){ height: 100vh;}
+			}
+			.img-box img{margin-bottom: 10px;}
+    </style>
+  </head>
+  <body>
+		<div class="container">
+			<section class="unit-m-1-2 unit-l-1-3">
+				<h2 class="headline">Headline 1</h2>
+				<div class="gutter ">
+					<img class="unit-s-1-1" src="http://placehold.it/500x300/000/fff/?text=img" alt="img">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+			</section>
+			<section class="unit-m-1-2 unit-l-1-3">
+				<h2 class="headline">Headline 2</h2>
+				<div class="gutter">
+					<p class="unit-l-1-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+					<p class="unit-l-1-2">consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+			</section>
+			<section class="unit-m-1-2 unit-l-1-3">
+				<h2 class="headline">Headline 3</h2>
+				<div class="gutter img-box">
+					<img class="unit-s-1-1 unit-m-1-2 unit-l-1-1" src="http://placehold.it/500x200/000/fff/?text=img1" alt="img">
+					<img class="unit-s-1-1 unit-m-1-2 unit-l-1-1" src="http://placehold.it/500x200/000/fff/?text=img2" alt="img">
+					<img class="unit-s-1-1 unit-m-1-2 unit-l-1-1" src="http://placehold.it/500x200/000/fff/?text=img3" alt="img">
+					<img class="unit-s-1-1 unit-m-1-2 unit-l-1-1" src="http://placehold.it/500x200/000/fff/?text=img4" alt="img">
+				</div>
+			</section>
+		</div>
+  </body>
+</html>

@@ -15,8 +15,9 @@
 7. 0710_grid-system 2
     - [grid-system 예제 2](https://sseom.github.io/Example/0710_grid-system2)
 8. 0721_HTML_CSS_guide
-    - [HTML_CSS_guide](https://sseom.github.io/Example/0721_HTML_CSS_guide/html_css_guide.md)
-
+    - [HTML_CSS_guide](https://github.com/sseom/Example/blob/master/0721_HTML_CSS_guide/html_css_guide.md)
+9. 0724_responsive-grid
+    - [responsive-grid](https://sseom.github.io/Example/0724_responsive-grid)
 
 ---
 
