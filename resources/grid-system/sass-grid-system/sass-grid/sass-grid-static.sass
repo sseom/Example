@@ -1,0 +1,37 @@
+//sass 로 static-grid 만들기
+/*	
+	총 너비 1180
+	컬럼갯수 10 
+	컬럼너비 118
+	유닛 118
+	커터 0
+	
+	모바일 320
+	컬럼갯수 2
+	컬럼너비 160
+	거터0
+
+$large-web-width: 1180
+//$medium-web-width: 750
+$small-web-width: 320
+$large-columns: 10
+$small-columns: 2
+
+
+
+@for $col-num from 1 through $small-columns
+	.unit-s-#{$col-num}
+		width: $small-web-width/$small-columns * $col-num +px 
+
+// @for $col-num from 1 through $large-columns
+// 	.unit-l-#{$col-num}
+// 		width: $large-web-width/$large-columns * $col-num +px 
+
+
+// 레스펀시브 2중포문
+@media (min-width: 700px)
+	@for $col-num from 1 through $large-columns
+		@for $target-num from 1 through $col-num
+			.unit-l-#{$target-num}-#{$col-num}
+				width: 100%/$col-num * $target-num
+

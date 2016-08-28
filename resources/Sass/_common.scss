@@ -1,0 +1,117 @@
+%reset-list{
+  margin-top:    0;
+  margin-bottom: 0;
+  padding-left:  0;
+  list-style:    none;
+}
+
+//이미지 하단공백
+%rm-img-blank{
+	vertical-align: bottom;
+}
+
+%align-img-bottom img + *{
+  overflow: hidden;
+}
+
+
+// img, video
+// RWD: Responsive Web Design  20일차 수업 참고
+// 콘텐츠 이미지(<img>)에 적용되는 Fluid Image
+%rwd-media-content{
+  width: 100%;
+  height: auto;
+}
+%_rwd-medai-ratio{
+	width: 100%;
+	height: 0;
+	background-size: cover;
+	background-position: center center;
+}
+
+// 배경 이미지(CSS)에 적용되는 Fluid BG video
+/*
+    스크린 비율(가로x세로)
+    4:3  = 75%
+    16:9 = 56.25%
+    21:9 = 42.857142857%;
+*/
+
+// 함수 호출
+@import "fonctions/percent";
+
+// 화면비율
+%rwd-media-4-3 {
+	@extend %_rwd-medai-ratio
+  // padding-bottom: 75%;
+  // padding-bottom: 3/4*100%;
+  // 3/4*100%  
+  padding-bottom: percent(3,4);
+}
+%rwd-media-16-9 {
+	@extend %_rwd-medai-ratio
+  padding-bottom: 56.25%;
+}
+%rwd-media-21-9 {
+	@extend %_rwd-medai-ratio
+  padding-bottom: 42.857142857%;
+}
+/* 패딩바텀
+  스크린 비율(가로x세로)
+  4:3  = 75%
+  16:9 = 56.25%
+  21:9 = 42.857142857%;
+*/
+
+/* 비디오(유투브, 비메오 사용) 아이프레임을 감싼 무모 */
+%rwd-media-container{
+  position: relative;
+  width: 100%;
+  height: 0;
+  /* 여백이 필요한 경우 */
+  /*padding-top: 30px;*/
+  padding-bottom: 56.25%;
+}
+/* 아이프레임에 들어가는 */
+%rwd-media {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+// 이미지 가로 중앙 정렬 
+%horizontal-center-img {
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+//클리어픽스
+%clearfix{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+// 숨김 글자
+%readable-hidden{
+  overflow: hidden;
+  position: absolute;
+  width:    1px;
+  height:   1px;
+  margin:   -1px;
+  border:   0;
+  padding:  0;
+}
+
+// 탭포커스 
+%readable-focus{
+  overflow: visible;
+  position: static;
+  clip:     auto;
+  width:    auto;
+  height:   auto;
+  margin:   0;
+}

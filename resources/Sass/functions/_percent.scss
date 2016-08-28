@@ -1,0 +1,4 @@
+//Sass function
+@function persent($targer, $context){
+	@return $target/$context*100%;
+}

@@ -1,0 +1,83 @@
+%reset-list{
+  margin-top:    0;
+  margin-bottom: 0;
+  padding-left:  0;
+  list-style:    none;
+}
+
+//이미지 하단공백
+%rm-img-blank{
+	vertical-align: bottom;
+}
+
+%align-img-bottom img + *{
+  overflow: hidden;
+}
+
+// 이미지 가로 중앙 정렬 
+%horizontal-center-img {
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+%alink{
+  text-decoration: none;
+  color: inherit;
+}
+
+//클리어픽스
+%clearfix{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+// 숨김 글자
+%readable-hidden{
+  overflow: hidden;
+  position: absolute;
+  width:    1px;
+  height:   1px;
+  margin:   -1px;
+  border:   0;
+  padding:  0;
+}
+
+// 탭포커스 
+%readable-focus{
+  overflow: visible;
+  position: static;
+  clip:     auto;
+  width:    auto;
+  height:   auto;
+  margin:   0;
+}
+
+%button_reset{
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+%content_wrap_h2_border{
+  content: '';
+  display: inline-block;
+  width: 320px;
+  padding-top: 8px;
+  border-top: 1px solid #333;
+  box-sizing: border-box;
+}
+%prev_next_btn{
+  width: 33px;
+  height: 106px;
+  background-repeat: no-repeat;
+}
+%input_style{
+  border: 1px solid #dadee8;
+  background-color: white;
+  border-radius: 4px;
+  padding-left: 19px;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #a5a6a7;
+}

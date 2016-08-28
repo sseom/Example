@@ -25,5 +25,7 @@
 1. 0622_expedia [익스피디아](https://github.com/sseom/homework/blob/master/teamActivity/0622_expedia.html)
 2. 0629_epeople [국민신문고](https://github.com/sseom/homework/blob/master/teamActivity/0629_epeople.html)
 
+---
 
-
+#other
+1. Exe_01 [01_마크업 연습예제](https://sseom.github.io/Example/Exe_01/)
