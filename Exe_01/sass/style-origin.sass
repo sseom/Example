@@ -1,0 +1,248 @@
+@import common
+@import static-grid
+
+body
+  color: #5a5e65
+
+h1,h2,h3,h4,h5,h6,p
+  padding: 0
+  margin: 0
+
+h3
+  font-size: 20px
+  font-weight: 400
+h2
+  font-size: 25px
+  font-weight: 400
+  line-height: 2
+
+img
+  @extend %rm-img-blank
+
+ul
+  @extend %reset-list
+
+.hidden_text
+  @extend %readable-hidden
+
+.header_wrapping
+  width: 100%
+  height: 120px
+  background-color: #4d4b4a
+
+%content_center
+  width: 940px
+  margin-right: auto
+  margin-left: auto
+
+.header_wrap
+  @extend %content_center
+
+.logo
+  margin-top: 42px
+  color: #f3987b
+  > a
+    @extend %alink
+    color: #f3987b
+    font-size: 24px
+    font-weight: bold
+    vertical-align: text-bottom
+  &::before
+    font-size: 36px
+    margin-right: 10px
+
+.gnb
+  margin-left: 50px
+  > ul
+    margin-top: 54px
+  a
+    @extend %alink
+    color: #fff
+    font-weight: lighter
+  li
+    float: left
+    margin-right: 80px
+  li:last-child
+    margin-right: 0
+
+.slider_wrapping
+  width: 100%
+  background-color: #f8d2c5
+
+.slider_wrap
+  @extend %content_center
+  position: relative
+  margin-bottom: 48px
+  height: 408px
+  button
+    @extend %button_reset
+    &::before
+      color: #fff
+      font-size: 86px
+  .play_btn
+    padding-top: 10px
+  .prev_btn
+    @extend %prev_next_btn
+    margin-left: 10px
+    background-image: url(../img/arrow-left.png)
+  .next_btn
+    @extend %prev_next_btn
+    margin-left: 8px
+    background-image: url(../img/arrow-right.png)
+
+.btn_wrap
+  position: absolute
+  top: 50%
+  transform: translateY(-62%)
+
+.con_wrapping
+  @extend %content_center
+
+.content_wrap
+  @extend %clearfix
+  .content_title
+    margin-bottom: 22px
+    text-align: center
+    &::before
+      @extend %content_wrap_h2_border
+      margin-right: 36px
+    &::after
+      @extend %content_wrap_h2_border
+      margin-left: 36px
+
+[class^="content_"]
+  position: relative
+  h3
+    position: absolute
+    top: 240px
+  p
+    height: 96px
+    padding-top: 24px
+    overflow: hidden
+    font-size: 16px
+    line-height: 1.5
+  img
+    margin-bottom: 26px
+
+.slider_img_wrap
+  @extend %clearfix
+  padding:
+    top: 46px
+    bottom: 48px
+  position: relative
+  height: 336px
+  .btn_wrap
+    button
+      @extend %button_reset
+    .prev_btn
+      @extend %prev_next_btn
+      margin-left: 10px
+      background-image: url(../img/arrow-left-w.png)
+    .next_btn
+      @extend %prev_next_btn
+      margin-left: 35px
+      background-image: url(../img/arrow-right-w.png)
+
+.indicator
+  position: absolute
+  bottom: 72px
+  text-align: center
+  li
+    display: inline
+    margin-right: 15px
+  li:last-child
+    margin-right: 0
+  li > a
+    display: inline-block
+    width: 15px
+    height: 15px
+
+.btn_off
+  background-image: url(../img/button-off.png)
+.btn_on
+  background-image: url(../img/button-active.png)
+
+.makers_wrap
+  @extend %clearfix
+  li
+    margin-bottom: 48px
+    height: 120px
+
+.makers_title
+  text-align: center
+  margin-bottom: 22px
+  &::before
+    @extend %content_wrap_h2_border
+    margin-right: 40px
+  &::after
+    @extend %content_wrap_h2_border
+    margin-left: 40px
+
+.marker_img
+  text-align: center
+  padding-top: 9px
+  margin-left: 20px
+.marker_text
+  padding-top: 24px
+  p
+    font-size: 16px
+    line-height: 1.5
+
+.map_wrap
+  @extend %clearfix
+  width: 100%
+  margin-bottom: 24px
+#map_box
+  padding-bottom: 360px
+
+.inquire_wrapping
+  @extend %content_center
+  @extend %clearfix
+
+.inquire_wrap
+  button
+    height: 72px
+    padding: 0
+    margin-bottom: 24px
+    background-color: #4d4b4a
+    border: none
+    border-radius: 4px
+    font-size: 20px
+    color: #fff
+
+.inquire_title
+  text-align: center
+  margin-bottom: 22px
+  &::before
+    @extend %content_wrap_h2_border
+    margin-right: 77px
+  &::after
+    @extend %content_wrap_h2_border
+    margin-left: 77px
+.input_name
+  @extend %input_style
+  height: 48px
+  margin-right: 20px
+.input_email
+  @extend %input_style
+  height: 48px
+
+.fa-send::before
+  color: #fff
+  font-size: 25px
+  padding-right: 10px
+.txtarea
+  @extend %input_style
+  height: 240px
+  margin:
+    top: 24px
+    bottom: 24px
+  padding-top: 24px
+
+.footer_wrap
+  width: 100%
+  position: absolute
+  height: 72px
+  text-align: center
+  line-height: 72px
+  background: #d6d2d1

@@ -491,20 +491,11 @@ h2 {
 }
 
 .logo {
-  margin-top: 42px;
-  color: #f3987b;
+  margin-top: 10px;
 }
 
-.logo > a {
-  color: #f3987b;
-  font-size: 24px;
-  font-weight: bold;
-  vertical-align: text-bottom;
-}
-
-.logo::before {
-  font-size: 36px;
-  margin-right: 10px;
+.logo img {
+  width: 100%;
 }
 
 .gnb {
@@ -571,11 +562,11 @@ h2 {
 }
 
 .content_wrap .content_title::before {
-  margin-right: 36px;
+  margin-right: 77px;
 }
 
 .content_wrap .content_title::after {
-  margin-left: 36px;
+  margin-left: 77px;
 }
 
 [class^="content_"] {
