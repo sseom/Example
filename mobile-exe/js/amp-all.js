@@ -108,6 +108,7 @@ function removeClass(el, class_name) {
   var mapContainer = document.getElementById('mapview');
 
   // 버튼 클릭시 이벤트 실행
+  // 지도보기 버튼
   btn_map_view.onclick = function(){
 
     // 클래스를 붙여 지도 보기 영역 오픈
@@ -137,9 +138,7 @@ function removeClass(el, class_name) {
         image : innerMapMarkerImage, // 마커의 이미지
         map: innerMap // 마커를 표시할 지도 객체
     });
-
     return false;
-
   };
 
   // 클로즈 버튼
@@ -148,7 +147,6 @@ function removeClass(el, class_name) {
     removeClass(mapview_wrap , 'mapview_open');
     // 바디의 스크롤바 부분은 자동으로..
     body.style.overflow = 'auto';
-
     return false;
   };
 
@@ -166,6 +164,7 @@ function removeClass(el, class_name) {
   var roadview_close_btn = document.querySelector('.roadview_close_btn');
 
   // 버튼 클릭시 이벤트 실행
+  // 로드뷰 버튼
   btn_load_view.onclick = function(){
 
     addClass(roadview_wrap , 'roadview_open');
